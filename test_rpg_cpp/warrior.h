@@ -2,7 +2,7 @@
 #include "hp.h"
 #include "StatBlock.h"
 
-class Warrior : public hp, StatBlock
+class Warrior : public hp, public StatBlock
 {
 public:
 
