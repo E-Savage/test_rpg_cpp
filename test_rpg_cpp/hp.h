@@ -1,6 +1,7 @@
 #pragma once
 #include "hitpointtypes.h"
 
+
 class hp
 {
 public:
@@ -50,6 +51,24 @@ public:
 
 		CurrentHP += amount;
 	}
+
+	hp()
+	{
+		CurrentHP = 1;
+		MaxHP = 1;
+	}
+
+	hp(hptype cHP, hptype mHP)
+	{
+		CurrentHP = cHP;
+		MaxHP = mHP;
+		
+		if (CurrentHP > MaxHP)
+		{
+			CurrentHP = MaxHP;
+		}
+	}
+
 
 private:
 	hptype CurrentHP;
