@@ -18,6 +18,17 @@ public:
 		return true;
 	}
 
+	hptype getMaxHP()
+	{
+		return MaxHP;
+	}
+
+	hptype getCurrentHP()
+	{
+		return CurrentHP;
+	}
+
+
 	void takeDamage(hptype damage)
 	{
 		if (damage > CurrentHP)
@@ -34,12 +45,13 @@ public:
 		if (amount + CurrentHP > MaxHP)
 		{
 			CurrentHP = MaxHP;
+			return;
 		}
+
+		CurrentHP += amount;
 	}
 
-
 private:
-	hptype ShieldHP;
 	hptype CurrentHP;
 	hptype MaxHP;
 };
