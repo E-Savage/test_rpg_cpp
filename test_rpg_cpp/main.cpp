@@ -10,7 +10,7 @@ int main() {
 	std::cout << "Warrior \n" 
 		<< "-MaxHP: " << warr1.getMaxHP() << "\n" 
 		<< "-Strength: " << warr1.getStrength() << "\n"
-		<< "Intellect: " << warr1.getIntellect();
+		<< "-Intellect: " << warr1.getIntellect();
 
 	return 0;
 }
